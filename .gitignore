@@ -1,2 +1,7 @@
 /TRAIN_DATA
 /RESULT
+*.ipynb
+*.png
+*.pkl
+__pycache__
+.hypothesis
