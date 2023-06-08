@@ -10,7 +10,9 @@
 2. Modeling
     - Use pretrained ResNet model
 
-[image]
+<p align="center">
+  <img src="https://github.com/MinTagg/VISOL_Classifier/assets/98318559/7df47c76-3850-4b60-bb40-c2e059c46a6a">
+</p>
 
 ## Augmentation : Random shuffle
     - Cut multiple images to create one image
