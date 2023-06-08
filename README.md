@@ -1,10 +1,7 @@
 # VISOL_Classifier
 
 ## Purpose
-- This is a classifier for the VISOL data competition.
-
-- [link](https://dacon.io/competitions/official/236107/overview/description)
-
+- This is a classifier for the [VISOL data competition](https://dacon.io/competitions/official/236107/overview/description).
 ## Plan
 1. Data Preprocessing
     - Preprocess Image to crop the half of image
