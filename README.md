@@ -17,4 +17,10 @@
 ## Augmentation : Random shuffle
     - Cut multiple images to create one image
     - There is not enough variation in the data, so we need to create more data.
-[sample image]
+<p align="middle">
+  <img src="https://github.com/MinTagg/VISOL_Classifier/assets/98318559/0b7aadcd-018a-4a87-a716-0295f74830c6">
+  <img src="https://github.com/MinTagg/VISOL_Classifier/assets/98318559/51693b80-9227-487e-96f4-3b452347def2">
+</p>
+
+
+
