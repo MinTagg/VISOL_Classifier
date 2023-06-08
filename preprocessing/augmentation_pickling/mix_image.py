@@ -15,7 +15,7 @@ def mix_image(image1, image2, target_size = (224, 224, 3), color = False):
     if image2.shape != target_size:
         image2 = cv2.resize(image2, target_size[:2])
 
-    left_position = int((95/224) * target_size[0])
+    left_position = int((95/224) * target_size[1])
     right_position = int((190/224) * target_size[1])
 
     left = image1[:, :left_position, :]
