@@ -8,12 +8,16 @@ from dataloader import MyDataset
 import time
 import tqdm
 
-# hyperparameter
+# Train
 batch_size = 128
 learning_rate = 0.001
-epoch = 60
-model_name = 'resnet50'
+epoch = 15
+# Model
+model_name = 'resnet101'
 freeze = True
+# Dataset
+one_hot = True
+augmentation = True
 
 device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
@@ -21,7 +25,7 @@ device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 train_data_path = '../VISOL/train/'
 
 # make dataset
-dataset = MyDataset()
+dataset = MyDataset(one_hot= one_hot, augmentation = augmentation)
 # seperate dataset into train and validation using sklearn
 train_dataset, val_dataset = torch.utils.data.random_split(dataset, [int(len(dataset) * 0.8), len(dataset) - int(len(dataset) * 0.8)])
 # make dataloader
@@ -29,7 +33,7 @@ train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True
 val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
 
 # make model
-model = MODEL(freeze = freeze, network = model_name).to(device)
+model = MODEL(freeze = freeze, network = model_name, one_hot= one_hot).to(device)
 
 # make optimizer
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
@@ -48,8 +52,11 @@ save_path= ('RESULT/{}'.format(now_time))
 # make log txt in save_path
 f = open(save_path + '/log.txt', 'w')
 # save hyperparameter in log.txt
+f.write(f"File path : {now_time}\n")
 f.write(f"batch_size: {freeze}\n")
-f.write(f"batch_size: {model_name}\n")
+f.write(f"model_type: {model_name}\n")
+f.write(f'Unknown Class : {one_hot}\n')
+f.write(f'Augmentation : {augmentation}\n')
 
 # train
 for i in range(epoch):
