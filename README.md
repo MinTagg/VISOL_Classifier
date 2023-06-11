@@ -31,7 +31,7 @@
   - shear
 
 <p align="middle">
-  <img src="hhttps://github.com/MinTagg/VISOL_Classifier/assets/98318559/059fa8d3-d861-409a-9ec0-ec7515a7ec17">
+  <img src="https://github.com/MinTagg/VISOL_Classifier/assets/98318559/059fa8d3-d861-409a-9ec0-ec7515a7ec17">
   <img src="https://github.com/MinTagg/VISOL_Classifier/assets/98318559/9a4ed712-2c88-49d7-80c9-d6ad4d86cf37">
 </p>
 
